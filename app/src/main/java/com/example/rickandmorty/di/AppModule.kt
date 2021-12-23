@@ -1,5 +1,6 @@
 package com.example.rickandmorty.di
 
+import com.example.rickandmorty.BuildConfig
 import com.example.rickandmorty.feature_main.common.Constants
 import com.example.rickandmorty.feature_main.data.remote.RickAndMortyApi
 import com.example.rickandmorty.feature_main.data.repository.RickAndMortyRepositoryImpl
@@ -20,7 +21,7 @@ object AppModule {
     @Singleton
     fun provideRickApi(): RickAndMortyApi {
         return Retrofit.Builder()
-            .baseUrl(Constants.BASE_URL)
+            .baseUrl(BuildConfig.API_KEY)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(RickAndMortyApi::class.java)
