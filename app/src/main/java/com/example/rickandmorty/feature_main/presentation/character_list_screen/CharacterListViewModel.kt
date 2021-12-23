@@ -7,6 +7,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class CharacterListViewModel  @Inject constructor(getCharacterList: GetCharacterList) :ViewModel(){
+class CharacterListViewModel @Inject constructor(getCharacterList: GetCharacterList) : ViewModel() {
     val characterList = getCharacterList()
 }

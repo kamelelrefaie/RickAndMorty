@@ -16,7 +16,7 @@ class RickAndMortyRepositoryImpl @Inject constructor(
     }
 
 
-    override suspend fun getCharacterInfo(characterId: String): CharacterInfoDto {
-        return api.getCoinById(characterId)
+    override suspend fun getCharacterInfo(characterId: Int): CharacterInfoDto {
+        return api.getCharacterById(charId = characterId)
     }
 }
